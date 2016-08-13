@@ -4,5 +4,6 @@ Encargados
 - Camilo Arguello
 - Cristhian Cepeda
 - Daniel Valenzuela
+- Daniela Sanchez
 - Juan Garay
 - Sebastian Díaz
