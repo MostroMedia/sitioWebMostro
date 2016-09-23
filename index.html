@@ -17,10 +17,8 @@
         <section id="logo">
             <div class="row">
                 <div class="col s6 logo">
-                    
                 </div>
                 <div class="col s6 social">
-                    
                 </div>
             </div>
         </section>
@@ -29,7 +27,7 @@
         <!--PRINCIPAL NAVIGATION, SECTIONS & CONTENT-->
         <section id="principal">
             <div id="home">
-                
+                <div style="width:700px;height:394px;position: absolute;left:0;right:0;top:0;bottom:0;margin:auto" id="bodymovin"></div>
             </div>
             
             <div id="servicios">
@@ -57,6 +55,22 @@
         
       <!--SCRIPTS-->
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/bodymovin.js"></script>
+      <script type="text/javascript">
+          
+        var animData = {
+        wrapper: document.getElementById('bodymovin'),
+        animType: 'svg',
+        loop: true,
+        prerender: true,
+        autoplay: true,
+        path: 'js/data.json'
+    	    
+    	};
+        var anim = bodymovin.loadAnimation(animData);
+        bodymovin.setSubframeRendering(false);
+
+      </script>
       <!--END SCRIPTS-->
     </body>
 </html>

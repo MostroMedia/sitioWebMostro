@@ -4,6 +4,12 @@ AUTOR: MOSTRO MEDIA
 
 */
 
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+}
+
 /*PRINCIPAL STYLE BODY*/
 /*--------END----------*/
 
