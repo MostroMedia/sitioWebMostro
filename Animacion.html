@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html style="width: 100%;height: 100%">
+<head>
+    <style type="text/css">
+        body, html{
+          margin:0;
+          width:100%;
+          height:100%;
+          /*background-color:#141414;*/
+        
+        }
+        #container{
+          width: 100%;
+          height:100%;
+          overflow: hidden;
+          cursor: pointer;
+        }
+        div{
+          font-size:0px;
+        }
+    </style>
+     
+</head>
+<body>
+
+<!--<div style="width:700px;height:394px;position: absolute;left:0;right:0;top:0;bottom:0;margin:auto" id="bodymovin"></div>-->
+
+<div id='container'></div>
+<script src="js/bodymovin.js"></script>
+<script>
+
+    var count = 0;
+    var container = document.getElementById('container');
+    var animData = {
+        container: container,
+        renderer: 'svg',
+        loop: true,
+        prerender: false,
+        autoplay: false,
+        autoloadSegments: false,
+        path: 'js/data.json'
+    };
+
+    var anim;
+    var isThrowing = false;
+
+
+    anim = bodymovin.loadAnimation(animData);
+    anim.addEventListener('DOMLoaded',startAnimation);
+    container.onclick = throwPancake;
+
+    function throwComplete(){
+        isThrowing = false;
+        anim.removeEventListener('loopComplete',throwComplete);
+    }
+
+    function throwPancake(){
+        if(isThrowing){
+            return;
+        }
+        isThrowing = true;
+        anim.playSegments([[27,142],[14,26]],true);
+        var baconRand = Math.random()*1420;
+        var butterXpos;
+      if(baconRand < 1420/2){
+        butterXpos = 500 + 900 + Math.random()*900;
+      } else {
+        butterXpos = 500 + Math.random()*900;
+      }
+        var baconPos = [-100+baconRand,480+Math.random()*370,0];
+        var butterPos = [butterXpos,470+Math.random()*430,0];
+        anim.layers[0].ks.p.k[0].e = baconPos;
+        anim.layers[2].ks.p.k[0].e = baconPos;
+        anim.layers[1].ks.p.k[0].e = butterPos;
+        anim.layers[3].ks.p.k[0].e = butterPos;
+        anim.addEventListener('loopComplete',throwComplete);
+    }
+
+    function startAnimation(){
+        anim.playSegments([[0,26],[14,26]],true);
+    }
+</script>
+</body>
+</html>
