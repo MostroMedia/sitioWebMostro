@@ -47,7 +47,7 @@ h1, h2{
     font-family:RobotoRegular;
 }
 .navbar-right{
-    margin-top:-33px;
+    /*margin-top:-33px;*/
 }
 .no-padding{
     padding-top: 25px;
