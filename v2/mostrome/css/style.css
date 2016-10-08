@@ -1,0 +1,79 @@
+/*Estilo Mostro Media*/
+
+@font-face {
+  font-family: steelfish;
+  src: url('../fonts/steelfishRG.ttf') format('truetype');
+}
+@font-face{
+  font-family: steelfishItalic;
+  src: url('../fonts/steelfishRGit.ttf') format('truetype');
+}
+@font-face{
+  font-family: RobotoBold;
+  src: url('../fonts/Roboto-Bold.ttf');
+}
+@font-face{
+  font-family: RobotoLight;
+  src: url('../fonts/Roboto-Light.ttf');
+}
+@font-face{
+  font-family: RobotoMedium;
+  src: url('../fonts/Roboto-Medium.ttf');
+}
+@font-face{
+  font-family: RobotoRegular;
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+@font-face{
+  font-family: RobotoThin;
+  src: url('../fonts/Roboto-Thin.ttf');
+}
+
+body{
+    font-family: RobotoThin;
+}
+h1, h2{
+    font-family:steelfish;
+}
+#svgContainer{
+  width:10%;
+  position: absolute;
+  margin-top: -15px;
+}
+.logo-mobile{
+    display:none;
+}
+.mainNav ul li{
+    font-family:RobotoRegular;
+}
+.navbar-right{
+    margin-top:-33px;
+}
+.no-padding{
+    padding-top: 25px;
+}
+.portfolio-box-caption-content .project-name{
+    font-family:steelfish;
+}
+.orange{
+	background-color: #E0540D;
+}
+.blue{
+	background-color: #3498DB;
+}
+.guava{
+	background-color: #FA7878;
+}
+.wisteria{
+	background-color: #8E44AD;
+}
+.tangerine{
+	background-color: #FFCC08;
+}
+.paper{
+	background-color: #BDC3C7;
+}
+.grey{}
+.emerald{
+	background-color: #2ECC71;
+}

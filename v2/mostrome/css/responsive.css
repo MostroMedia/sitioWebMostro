@@ -1,0 +1,39 @@
+/*-----RESPONSIVE STYLE-------*/
+
+/*------MOVIL------*/
+@media screen and (min-width: 50px) and (max-width: 480px){
+    #svgContainer{
+        display: none; 
+    }
+    .logo-mobile{
+        font-family: 'steelfish';
+        color:#E0540D;
+    }
+}
+/*------END--------*/
+
+/*-----TABLET------*/
+@media screen and (min-width:481px) and (max-width: 768px){
+    #svgContainer{
+        width: 20%;
+        height: auto;
+        display: inline-block; 
+    }
+    .logo-mobile{
+        display:none;
+    }
+}
+/*------END--------*/
+
+/*-----PC SMALL----*/
+@media screen and (min-width: 769px) and (max-width: 990px){
+    #svgContainer{
+        width: 20%;
+        height: auto;
+        display: inline-block; 
+    }
+    .logo-mobile{
+        display:none;
+    }
+}
+/*------END--------*/
